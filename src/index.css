@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@layer components {
+  /* Layout Base */
+  .sidebar-container { @apply w-64 bg-slate-900 text-white flex flex-col; }
+  .main-content { @apply flex-1 flex flex-col overflow-hidden bg-gray-100; }
+  .header-app { @apply bg-white shadow-sm p-4 flex justify-between items-center z-10; }
+
+  /* Cards e Containers */
+  .card-indicador { @apply bg-white p-6 rounded-lg shadow-sm border border-gray-200; }
+  .container-branco { @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden; }
+  .titulo-secao { @apply text-lg font-bold text-slate-800; }
+  .label-campo { @apply block text-sm font-medium text-slate-700 mb-1; }
+
+  /* Botões - Definindo os estilos diretamente para evitar o erro de 'unknown utility' */
+  .btn-primario { 
+    @apply px-4 py-2 rounded font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700; 
+  }
+  .btn-secundario { 
+    @apply px-4 py-2 rounded font-medium transition-colors bg-slate-100 text-slate-700 hover:bg-slate-200; 
+  }
+  .btn-alerta { 
+    @apply px-4 py-2 rounded font-medium transition-colors bg-yellow-500 text-white hover:bg-yellow-600; 
+  }
+  .btn-nav { 
+    @apply w-full text-left p-3 rounded hover:bg-slate-800 transition-colors; 
+  }
+
+  /* Tabelas */
+  .tabela-app { @apply w-full text-left border-collapse; }
+  .tabela-head { @apply bg-slate-50 border-b border-gray-200 text-slate-500 text-sm; }
+  .tabela-linha { @apply border-b border-gray-100 hover:bg-slate-50; }
+
+  /* Modais e Inputs */
+  .modal-overlay { @apply fixed inset-0 bg-slate-900/50 flex items-center justify-center z-50; }
+  .modal-content { @apply bg-white p-6 rounded-lg shadow-xl w-full max-w-md; }
+  .input-app { @apply w-full border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500; }
+}
